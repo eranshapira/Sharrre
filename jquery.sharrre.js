@@ -101,9 +101,9 @@
     googlePlus: "",
 
 	//new FQL method by Sire
-	facebook: "https://graph.facebook.com/fql?q=SELECT%20url,%20normalized_url,%20share_count,%20like_count,%20comment_count,%20total_count,commentsbox_count,%20comments_fbid,%20click_count%20FROM%20link_stat%20WHERE%20url=%27{url}%27&callback=?",
+	//facebook: "https://graph.facebook.com/fql?q=SELECT%20url,%20normalized_url,%20share_count,%20like_count,%20comment_count,%20total_count,commentsbox_count,%20comments_fbid,%20click_count%20FROM%20link_stat%20WHERE%20url=%27{url}%27&callback=?",
     //old method facebook: "http://graph.facebook.com/?id={url}&callback=?",
-    //facebook : "http://api.ak.facebook.com/restserver.php?v=1.0&method=links.getStats&urls={url}&format=json"
+    facebook : "http://api.ak.facebook.com/restserver.php?v=1.0&method=links.getStats&urls={url}&format=json",
     
     twitter: "http://cdn.api.twitter.com/1/urls/count.json?url={url}&callback=?",
     digg: "http://services.digg.com/2.0/story.getInfo?links={url}&type=javascript&callback=?",
@@ -365,6 +365,7 @@
     if(this.options.urlCurl !== ''){
       urlJson.googlePlus = this.options.urlCurl + '?url={url}&type=googlePlus'; // PHP script for GooglePlus...
       urlJson.stumbleupon = this.options.urlCurl + '?url={url}&type=stumbleupon'; // PHP script for Stumbleupon...
+      urlJson.facebook = this.options.urlCurl + '?url={url}&type=facebook'; // PHP script for Facebook...
     }
     $(this.element).addClass(this.options.className); //add class
     
