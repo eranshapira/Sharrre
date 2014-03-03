@@ -5,6 +5,8 @@ Make your sharing widget!
 Sharrre is a jQuery plugin that allows you to create nice widgets sharing for Facebook, Twitter, Google Plus (with PHP script) and more.
 More information on [Sharrre] (http://sharrre.com/#demos)
 
+This fork of jQuery Sharrre Plugin fixes the rate-limit on facebook and has an example for a C# controller to support Google Plus instead of PHP. (using urlCurl option)
+
 Usage
 ===
 
